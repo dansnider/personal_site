@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>My first Three.js app</title>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script type="text/javascript" src="javascripts/main.js"></script>
+		<script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
+	</head>
+	<body>
+		<div id='main'>
+		<script src="javascripts/three.min.js"></script>
+		<script>
+
+			var heading = document.createElement('div');
+			heading.style.position = 'absolute';
+			heading.style.zIndex = 1;    
+			heading.style.width = 100 + '%';
+			heading.style.height = 100;
+			heading.style.color = "white";
+			heading.style.left = 12 + 'px';
+			heading.innerHTML = "<h1>Dan Snider</h1>" + "<h3>Web Developer</h3>";
+			document.body.appendChild(heading);
+
+			var contact = document.createElement('div');
+			contact.style.position = 'absolute';
+			contact.style.zIndex = 1;
+			contact.style.color = "white";
+			contact.id = "contact"
+			contact.innerHTML = '<a href="#contactView"><p>contact</p></a>'
+			document.body.appendChild(contact)
+
+			var work = document.createElement('div');
+			work.style.position = 'absolute';
+			work.style.zIndex = 1;
+			work.style.color = "white";
+			work.id = "work"
+			work.innerHTML = '<a href="#workView"><p>work</p></a>'
+			document.body.appendChild(work)
+
+			var work = document.createElement('div');
+			work.style.position = 'absolute';
+			work.style.zIndex = 1;
+			work.style.color = "white";
+			work.id = "skills"
+			work.innerHTML = '<a href="#skillsView"><p>skills</p></a>'
+			document.body.appendChild(work)
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+			
+			var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+
+			camera.position.y = 0;
+			camera.position.z = 400;
+			camera.position.x = .70
+
+			var scene = new THREE.Scene();
+
+			var geometry = new THREE.BoxGeometry( 200, 200, 200);
+
+			for ( var i = 0; i < geometry.faces.length; i += 2 ) {
+				var hex = Math.random() * 0xffffff;
+				geometry.faces[ i ].color.setHex( hex );
+				geometry.faces[ i + 1 ].color.setHex( hex );
+			}
+
+			var material = new THREE.MeshBasicMaterial( { vertexColors: THREE.FaceColors, overdraw: 0.5 } );
+
+			cube = new THREE.Mesh( geometry, material );
+			scene.add( cube )
+
+			function rotate(degrees) {
+				cube.rotation.y = degrees * (Math.PI / 180);
+			}
+
+			function render() {
+				requestAnimationFrame( render );
+				cube.rotation.y += .001;
+				renderer.render( scene, camera );
+			}
+			render();
+
+		</script>
+	</div>
+	<div class='fullscreen' id='workView'>
+		<h1>Work</h1>
+	</div>
+	<div class='fullscreen' id='skillsView'>
+		<h1>Skills</h1>
+	</div>
+	<div class='fullscreen' id='contactView'>
+		<h1>Contact</h1>
+	</div>
+	</body>
+</html>

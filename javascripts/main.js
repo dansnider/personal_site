@@ -1,8 +1,10 @@
-console.log('loaded main.js')
+console.log( 'loaded main.js' );
 
-$('a').click(function(){
-  $('html, body').animate({
-    scrollTop: $( $.attr(this, 'href') ).offset().top
-  }, 500);
+$( 'a' ).click ( function () {
+	console.log( this )
+  $( 'html, body' ).animate({
+    scrollTop: $( $.attr( this, 'href' ) ).offset().top
+  }, 1000);
   return false;
 });
+

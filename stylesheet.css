@@ -5,6 +5,9 @@
 
 body { 
 	margin: 0; 
+	background-color: #FFFAFA
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
 }
 
 canvas { 
@@ -12,50 +15,78 @@ canvas {
 }
 
 h1 { 
+	font-size: 56px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	padding: 10px 0 10px 10px;
+	color: #130f30;
+	margin: 0 10px;
+}
+h2 {
 	font-size: 100px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 300;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
 	padding-bottom: 20px;
 }
-
 h3 {
 	font-size: 32px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
 	padding-left: 34px;
 	margin-top: -10px;
 }
-
-p {
-	font-size: 26px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
-	padding-left: 20px;
+a {
+	text-decoration: none;
+	color: inherit;
+	font-family: 'Oswald', sans-serif;
+}
+span {
+	font-size: 24px;
+}
+li {
+	font-size: 32px;
+}
+.icon {
+	font-size: 120px;
+	margin: 20px;
+}
+.card-image img{
+	margin-top: 1.75em;
 }
 
-#work {
-	top: 180px;
-	left: 3%;
-	cursor:pointer;
+#lolist img{
+	margin-top: 1.7em;
 }
-#contact {
-	top: 225px;
-	left: 4.6%;
-	cursor:pointer;
+.card {
+	margin: 10px;
 }
-#skills {
-	top: 270px;
-	left: 6.2%;
-	cursor:pointer;
+#spirit-dog {
+	margin-left: 8.333%;
+}
+#icon-row {
+	margin: 0 auto;
+	margin-top: 10%;
+	display: block;
+}
+
+#heading {
+	color: #FFFAFA;
+}
+#nav {
+	top: 170px;
+	margin-left: 5%;
 }
 #workView {
-	background-color: red;
+	background-color: #FFFAFA;
+	border-bottom: 4px solid #130f30;
 }
 #contactView {
-	background-color: green;
+	background-color: #FFFAFA;
+	border-bottom: 4px solid #130f30;
 }
 #skillsView {
-	background-color: blue;
+	background-color: #FFFAFA;
+	border-bottom: 4px solid #130f30;
 }
 .fullscreen {
 	min-height: 100%;

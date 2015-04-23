@@ -1,11 +1,12 @@
 <html>
 	<head>
-		<title>Dan Snider</title>
+		<title>Dan Snider | Web Developer NYC</title>
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="plugins/font-awesome-4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/mediaquery.css">
 		<script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="plugins/d3.min.js"></script>
 	</head>
@@ -78,7 +79,9 @@
 			render()
 
 		</script>
+	
 		<a href="#heading"><i id="up-arrow" class="fa fa-level-up"></i></a>
+	
 	</div>
 
 	<div class='fullscreen' id='workView'>
@@ -87,25 +90,25 @@
 		
 		<div class="row">
 			<a href="http://spirit-dog.herokuapp.com" target="_blank">
-	      <div id='spirit-dog' class="card col s5">
+	      <div id='spirit-dog' class="card col m5 s5">
 	      	<div class='card-image'>
 	      		<img class="col s12" src="images/spirit-dog.png" />
 	      	</div>
 	      	<div class="card-content">
-						<span>Spirit Dog</span>
-						<p>Spirit Dog helps you find the perfect dog breed for your lifestyle. Spirit dog is a data visualization app built using D3, Angular.js, jQuery, AJAX, and Ruby on Rails </p> 
+						<span class='card-title grey-text text-darken-4'>Spirit Dog</span>
+						<p>Spirit Dog helps you find the perfect dog breed for your lifestyle. Spirit Dog is a data visualization app built using D3, Angular.js, jQuery, AJAX, and Ruby on Rails </p> 
 					</div>   
 	      </div>
       </a>
       
       <a href="http://lolist.io" target="_blank">
-	      <div id="lolist" class="card col s5">
+	      <div id="lolist" class="card col m5 s5">
 	      	<div class="card-image">
 	        	<img class="col s12" src="images/lolist.png" />
 	        </div>
 	        <div class="card-content">
-						<span>LOList</span>
-						<p>LOList is a email notification app for comedy events built with Ruby on Rails, jQuery, AJAX, Action Mailer, and Materialize CSS framework.</p>
+						<span class='card-title grey-text text-darken-4'>LOList</span>
+						<p>LOList is an app that notifies you when your favorite comedians book shows near you. LOList is built with Ruby on Rails, jQuery, AJAX, Action Mailer, and Materialize CSS framework.</p>
 					</div>
 	      </div>
 	    </a>

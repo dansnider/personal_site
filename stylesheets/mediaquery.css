@@ -1,12 +1,13 @@
 @media (max-width: 600px) {
+  
   h2 {
     font-size: 76px;
   }
-  #icon-row {
-  	margin-top: 10%;
-		display: inline-block;
-		width: 40%;
+
+  #spirit-dog {
+  	margin-left: 0;
   }
+
   #icon-row i {
   	display: block;
   }

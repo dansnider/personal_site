@@ -28,7 +28,7 @@
 			list.style.zIndex = 1;
 			list.style.color = '#FFFAFA';
 			list.id = "nav";
-			list.innerHTML = '<li><a href="#workView">WORK</a></li><li><a href="#skillsView">SKILLS</a></li><li><a href="#contactView">CONTACT</a></li><li><a href="./DanSniderResume.pdf">RESUME</a></li>'
+			list.innerHTML = '<li><a href="#workView">WORK</a></li><li><a href="#skillsView">SKILLS</a></li><li><a href="#contactView">CONTACT</a></li><li><a href="./DanSniderResume.pdf" target="_blank">RESUME</a></li>'
 			document.body.appendChild( list ) ;
 
 			var renderer = new THREE.WebGLRenderer();
@@ -43,7 +43,7 @@
 
 			var scene = new THREE.Scene();
 
-			var geometry = new THREE.BoxGeometry( 120, 120, 120 );
+			var geometry = new THREE.BoxGeometry( 150, 150, 150 );
 
 			var material = new THREE.MeshBasicMaterial({ 
 				vertexColors: THREE.FaceColors,
@@ -85,7 +85,7 @@
 		<h1>WORK</h1>
 		
 		<div class="row">
-			<a href="http://spirit-dog.herokuapp.com">
+			<a href="http://spirit-dog.herokuapp.com" target="_blank">
 	      <div id='spirit-dog' class="card col s5">
 	      	<div class='card-image'>
 	      		<img class="col s12" src="images/spirit-dog.png" />
@@ -97,7 +97,7 @@
 	      </div>
       </a>
       
-      <a href="http://lolist.io">
+      <a href="http://lolist.io" target="_blank">
 	      <div id="lolist" class="card col s5">
 	      	<div class="card-image">
 	        	<img class="col s12" src="images/lolist.png" />
@@ -123,9 +123,9 @@
 	<div class='fullscreen' id='contactView'>
 		<h1>CONTACT</h1>
 		<div class="center-align" id="icon-row">
-		<a href="https://www.linkedin.com/in/danrsnider"><i class="fa fa-linkedin-square icon"></i></a>
-		<a href="mailto:dansnider@gmail.com"><i class="fa fa-envelope-o icon"></i></a>
-		<a href="https://github.com/dansnider"><i class="fa fa-github-square icon"></i></a>
+		<a href="https://www.linkedin.com/in/danrsnider" target="_blank"><i class="fa fa-linkedin-square icon"></i></a>
+		<a href="mailto:dansnider@gmail.com" target="_blank"><i class="fa fa-envelope-o icon"></i></a>
+		<a href="https://github.com/dansnider" target="_blank"><i class="fa fa-github-square icon"></i></a>
 		</div>
 	</div>
 	</body>

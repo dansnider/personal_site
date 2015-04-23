@@ -14,6 +14,14 @@ canvas {
 	width: 100%; height: 100% 
 }
 
+i {
+	transition: color 0.4s ease;
+}
+
+i:hover{
+	color: #8B80F9;
+}
+
 h1 { 
 	font-size: 56px;
 	font-family: 'Oswald', sans-serif;
@@ -45,7 +53,13 @@ span {
 }
 li {
 	font-size: 32px;
+	transition: all 0.4s ease;
 }
+li:hover{
+	color: #8B80F9;
+	margin-left: 6%;
+}
+
 .icon {
 	font-size: 120px;
 	margin: 20px;
@@ -105,3 +119,4 @@ li {
 	-webkit-backface-visibility:hidden; 
 	-webkit-transform: translateZ(0);
 }
+

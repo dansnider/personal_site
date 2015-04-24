@@ -88,6 +88,24 @@ var renderGraph = function() {
 	      .style("text-anchor", "middle")
 	  		.text(function(d) { return d.className })
 
+	  var colorArray = [
+	  	'#8B80F9',
+	  	'#48A9A6',
+	  	'#B6F6BC',
+	  	'#C0B9DD',
+	  	'#CDCDCD',
+	  	'#808F85',
+	  	'#7798AB',
+	  	'#C0D6DF',
+	  	'#4F6D7A'
+	  ]
+
+	  d3.selectAll('circle')
+	  		.on('mouseover', function(d){
+						d3.select(this)
+						.attr('fill', colorArray[ Math.floor(Math.random() * 9) ])
+					})
+
 	  function classes(root) {
 	  var classes = [];
 

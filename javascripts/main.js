@@ -17,4 +17,8 @@ $( window ).scroll( function() {
 	}
 })
 
+$('#about-me-button').click(function() {
+	$('#about-me-reveal').toggle('explode')
+	$('#about-me-text').toggle();
+})
 

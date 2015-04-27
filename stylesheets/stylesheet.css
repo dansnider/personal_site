@@ -24,7 +24,7 @@ i {
 }
 
 i:hover{
-	color: #8B80F9;
+	color: #7082B0;
 }
 
 h1 { 
@@ -71,7 +71,7 @@ li {
 }
 
 li:hover{
-	color: #8B80F9;
+	color: #FFDD97;
 	margin-left: 6%;
 }
 
@@ -86,6 +86,12 @@ li:hover{
 
 #lolist img{
 	margin-top: 1.7em;
+}
+
+#interests li {
+	font-family: 'Oswald', sans-serif; 
+	font-size: 24px;
+	padding-left: 10px;
 }
 
 .card {
@@ -165,15 +171,15 @@ li:hover{
 }
 
 #about-me-text {
-	right: 0.5%;
-	position: absolute;
-	text-align: right;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 700;
-	margin-top: 5px;
-	cursor: pointer;
-	z-index: 2;
-	color:white;
+  position: absolute;
+  text-align: right;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  color: black;
+  margin-top: -10px;
+  padding-left: 55px;
 }
 
 #about-me-reveal {
@@ -183,8 +189,25 @@ li:hover{
 	right:0vh;
 	display:none;
 	position: absolute;
-	border: 1px solid gray;
-	color: gray;
+	/*border: 1px solid #5F9EA0;*/
+	color: #FFFAFA;
+}
+#about-me-reveal p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 16;
+	margin-left: 10px;
+}
+#x-out-button {
+	padding-left: 55px;
+	position: absolute;
+	top: -10px;
+}
+#info {
+	margin-top: 20px;
+  padding-left: 22px;
+  font-size: 32px;
 }
 
 #subhead {
@@ -193,4 +216,30 @@ li:hover{
 	font-style: italic;
 	font-size: 16;
 	margin: -30px 0 0 5px;
+}
+#about-me {
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	padding-left: 41px;
+	padding-top:7px;
+	font-size: 30px;
+	line-height: 101%;
+	transition: all 0.4s ease;
+}
+#about-me:hover{
+	color: #7082B0;
+}
+
+#drop-me {
+	display: block;
+	margin: 0 auto;
+	margin-left: -30px;
+	text-align: center;
+	margin-top: 20px;
+}
+#drop-me a {
+	border: 1px solid white;
+	padding: 8px;
+	padding-right: 12px;
+
 }

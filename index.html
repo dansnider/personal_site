@@ -14,147 +14,88 @@
 		<script src="text/javascript" src="plugins/jquery-ui.min.js"></script>
 	</head>
 	<body>
-		<div id='main'>
-		<script src="plugins/three.min.js"></script>
-		<script>
+		<div id="main">
+			<script src="plugins/three.min.js"></script>
+			<script type="text/javascript" src="javascripts/polygon.js"></script>
 
-			var heading = document.createElement( 'div' );
-			heading.style.position = 'absolute';
-			heading.style.zIndex = 1;    
-			heading.style.width = 100 + '%';
-			heading.style.height = 100;
-			heading.id = "heading";
-			heading.style.left = 12 + 'px';
-			heading.innerHTML = "<h2>DAN SNIDER</h2>" + "<h3>(<span id='subhead'>web developer</span> )</h3>";
-			document.body.appendChild( heading );
-
-			var list = document.createElement( 'ul' );
-			list.style.position = 'absolute';
-			list.style.zIndex = 1;
-			list.style.color = '#FFFAFA';
-			list.id = "nav";
-			list.innerHTML = '<li><a href="#workView">WORK</a></li><li><a href="#skillsView">SKILLS</a></li><li><a href="#contactView">CONTACT</a></li><li><a href="./DanSniderResume.pdf" target="_blank">RESUME</a></li>'
-			document.body.appendChild( list ) ;
-
-			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+			<a href="#heading"><i id="up-arrow" class="fa fa-level-up"></i></a>
 			
-			var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+			<div id="about-me-button">
+				<span id="about-me">ABOUT ME</span>
+			</div>
+			
+			<div id="about-me-reveal">
+				<h2>Hello</h2>
 
-			camera.position.y = 0;
-			camera.position.z = 400;
-			camera.position.x = .70;
+				<p>I like: </p>
+					<ul id="interests">
+						<li>The Internet</li>
+						<li>Jazz Music</li>
+						<li>Data Visualization</li>
+						<li>Dog Breeds</li>
+						<li>The Simpsons (Seasons 2 - 9)</li>
+						</ul>
+						<br>
+						<p>I'm currently looking for a position at the right company. Please contact me about freelance, full, and part-time opportunities. 
+						<br>
+						<span id="drop-me"> <a id="drop-me-link" href="#contactView">Drop me a line!</a></span>
+						</p>
 
-			var scene = new THREE.Scene();
-
-			var geometry = new THREE.BoxGeometry( 150, 150, 150 );
-
-			var material = new THREE.MeshBasicMaterial({ 
-				vertexColors: THREE.FaceColors,
-				color: 0x5F9EA0,
- 				wireframe: true, 
- 			});
-
-			var cubes = [];
-
-			for ( var i = 0; i < 60; i++ ) {
-				cube = new THREE.Mesh( geometry, material );
-				scene.add( cube );
-				cubes.push( cube );
-				cubes.forEach(function(cube, index){
-					cube.rotation.y = index/2;
-				})
-			}
-
-			function rotate( degrees ) {
-				cube.rotation.y = degrees * (Math.PI / 180);
-			}
-
-			function render() {
-				requestAnimationFrame( render );
-				cubes.forEach( function( cube ) {
-					cube.rotation.y += .005;
-					cube.rotation.x += .004;
-				})
-				renderer.render( scene, camera );
-			}
-			render()
-
-		</script>
-	
-		<a href="#heading"><i id="up-arrow" class="fa fa-level-up"></i></a>
-		
-		<div id="about-me-button">
-			<span id='about-me'>ABOUT ME</span>
-		</div>
-		
-		<div id='about-me-reveal'>
-			<h2>Hello</h2>
-
-			<p>I like: </p>
-				<ul id='interests'>
-					<li>The Internet</li>
-					<li>Jazz Music</li>
-					<li>Data Visualization</li>
-					<li>Dog Breeds</li>
-					<li>The Simpsons (Seasons 2 - 9)</li>
-					</ul>
-					<br>
-					<p>I'm currently looking for a position at the right company. Please contact me about freelance, full, and part-time opportunities. <br><span id='drop-me'> <a id='drop-me-link' href="#contactView">Drop me a line!</a></span></p>
+			</div>
 
 		</div>
-	</div>
 
-	<div class='fullscreen' id='workView'>
-		
-		<h1>WORK</h1>
-		
-		<div class="row">
-			<a href="http://spirit-dog.herokuapp.com" target="_blank">
-	      <div id='spirit-dog' class="card col m5 s12">
-	      	<div class='card-image'>
-	      		<img class="col s12" src="images/spirit-dog.png" />
-	      	</div>
-	      	<div class="card-content">
-						<span class='card-title grey-text text-darken-4'>Spirit Dog</span>
-						<p>Spirit Dog helps you find the perfect dog breed for your lifestyle. Spirit Dog is a data visualization app built using D3, Angular.js, jQuery, AJAX, and Ruby on Rails </p> 
-					</div>   
-	      </div>
-      </a>
-      
-      <a href="http://lolist.io" target="_blank">
-	      <div id="lolist" class="card col m5 s12">
-	      	<div class="card-image">
-	        	<img class="col s12" src="images/lolist.png" />
-	        </div>
-	        <div class="card-content">
-						<span class='card-title grey-text text-darken-4'>LOList</span>
-						<p>LOList is an app that notifies you when your favorite comedians book shows near you. LOList is built with Ruby on Rails, jQuery, AJAX, Action Mailer, and Materialize CSS framework.</p>
-					</div>
-	      </div>
-	    </a>
-	  
-	  </div>
+		<div class="fullscreen" id="workView">
+			
+			<h1>WORK</h1>
+			
+			<div class="row">
+				<a href="http://spirit-dog.herokuapp.com" target="_blank">
+		      <div id="spirit-dog" class="card col m5 s12">
+		      	<div class="card-image">
+		      		<img class="col s12" src="images/spirit-dog.png" />
+		      	</div>
+		      	<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Spirit Dog</span>
+							<p>Spirit Dog helps you find the perfect dog breed for your lifestyle. Spirit Dog is a data visualization app built using D3, Angular.js, jQuery, AJAX, and Ruby on Rails </p> 
+						</div>   
+		      </div>
+	      </a>
+	      
+	      <a href="http://lolist.io" target="_blank">
+		      <div id="lolist" class="card col m5 s12">
+		      	<div class="card-image">
+		        	<img class="col s12" src="images/lolist.png" />
+		        </div>
+		        <div class="card-content">
+							<span class="card-title grey-text text-darken-4">LOList</span>
+							<p>LOList is an app that notifies you when your favorite comedians book shows near you. LOList is built with Ruby on Rails, jQuery, AJAX, Action Mailer, and Materialize CSS framework.</p>
+						</div>
+		      </div>
+		    </a>
+		  
+		  </div>
 
-	</div>
-
-
-
-	<div class='fullscreen' id='skillsView'>
-		<h1>SKILLS</h1>
-		<div class="svg"></div>
-
-	</div>
-	<div class='fullscreen' id='contactView'>
-		<h1>CONTACT</h1>
-		<div class="center-align" id="icon-row">
-		<a href="https://www.linkedin.com/in/danrsnider" target="_blank"><i class="fa fa-linkedin-square icon"></i></a>
-		<a href="mailto:dansnider@gmail.com" target="_blank"><i class="fa fa-envelope-o icon"></i></a>
-		<a href="https://github.com/dansnider" target="_blank"><i class="fa fa-github-square icon"></i></a>
 		</div>
-	</div>
+
+
+
+		<div class="fullscreen" id="skillsView">
+			<h1>SKILLS</h1>
+			<div class="svg"></div>
+		</div>
+
+		<div class="fullscreen" id="contactView">
+			<h1>CONTACT</h1>
+				<div class="center-align" id="icon-row">
+					<a href="https://www.linkedin.com/in/danrsnider" target="_blank"><i class="fa fa-linkedin-square icon"></i></a>
+					<a href="mailto:dansnider@gmail.com" target="_blank"><i class="fa fa-envelope-o icon"></i></a>
+					<a href="https://github.com/dansnider" target="_blank"><i class="fa fa-github-square icon"></i></a>
+			</div>
+		</div>
+
 	</body>
+
 	<script type="text/javascript" src="javascripts/main.js"></script>
 	<script type="text/javascript" src="javascripts/graph.js"></script>
 </html>

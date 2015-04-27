@@ -1,25 +1,36 @@
 <html>
 	<head>
 		<title>Dan Snider | Web Developer NYC</title>
+		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic' rel='stylesheet' type='text/css'>
+
+		<!-- CSS Plugins -->
 		<link rel="stylesheet" href="plugins/font-awesome-4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+
+		<!-- Custom Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/mediaquery.css">
+
+		<!-- Favicon -->
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+		<!-- JavaScrpt plugins -->
 		<script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="plugins/d3.min.js"></script>
 		<script src="text/javascript" src="plugins/jquery-ui.min.js"></script>
 	</head>
 	<body>
 		<div id="main">
+			<!-- Rotating Polygon -->
 			<script src="plugins/three.min.js"></script>
 			<script type="text/javascript" src="javascripts/polygon.js"></script>
 
 			<a href="#heading"><i id="up-arrow" class="fa fa-level-up"></i></a>
 			
+			<!-- About Me Section -->
 			<div id="about-me-button">
 				<span id="about-me">ABOUT ME</span>
 			</div>
@@ -45,6 +56,7 @@
 
 		</div>
 
+		<!-- Work section -->
 		<div class="fullscreen" id="workView">
 			
 			<h1>WORK</h1>
@@ -79,12 +91,14 @@
 		</div>
 
 
-
+		<!-- Skills Section -->
 		<div class="fullscreen" id="skillsView">
 			<h1>SKILLS</h1>
+			<!-- Skills D3 Graph -->
 			<div class="svg"></div>
 		</div>
 
+		<!-- Contact Section -->
 		<div class="fullscreen" id="contactView">
 			<h1>CONTACT</h1>
 				<div class="center-align" id="icon-row">
@@ -96,6 +110,7 @@
 
 	</body>
 
+	<!-- Custom JS Files -->
 	<script type="text/javascript" src="javascripts/main.js"></script>
 	<script type="text/javascript" src="javascripts/graph.js"></script>
 </html>

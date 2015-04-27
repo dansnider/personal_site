@@ -1,5 +1,6 @@
 console.log('loaded graph.js')
 var renderGraph = function() {
+		// Data JSON file
 		var data = {
 			"name": "languages",
 			"children": [
@@ -43,16 +44,17 @@ var renderGraph = function() {
 		var width = 800,
 				height = 800;
 		
+		// canvas creation
 		var canvas = d3.select('.svg')
 				.append('svg')
 				.attr('width', width)
 				.attr('height', height)
 				.attr('class', 'graph')
 				.append('g')
-						// .attr('transform', 'translate(50, 50)');
 		
 		var flattened = (classes(data))
 
+		// define pack layout
 		var pack = d3.layout.pack()
 				.sort(null)
 		    .size([width, height])
@@ -64,6 +66,7 @@ var renderGraph = function() {
 		
 		var nodes = pack.nodes(flattened)
 
+		// node creation
 		var node = canvas.selectAll(".node")
 				.data(nodes.filter(function(d) { return !d.children; }))
 
@@ -72,6 +75,7 @@ var renderGraph = function() {
 	      		.attr("class", "node")
 	      		.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
+	  // appending circle geometry to each node
 	  node.append('circle')
 	  		.attr('fill', function(d){ return color(d.value) })
 	  		.attr('r', 0)
@@ -79,8 +83,6 @@ var renderGraph = function() {
 	  		.ease('sin')
 	  		.delay(function(d, i) { return i * 60; })
 	  		.attr('r', function(d) { return d.r })
-	  		// .attr('stroke', '#DDDDDD')
-	  		// .attr('stroke-width', 2);
 
 	  node.append('text')
 	  		.transition()
@@ -88,6 +90,7 @@ var renderGraph = function() {
 	      .style("text-anchor", "middle")
 	  		.text(function(d) { return d.className })
 
+	  // colors for hover effect
 	  var colorArray = [
 	  	'#8B80F9',
 	  	'#48A9A6',
@@ -100,12 +103,14 @@ var renderGraph = function() {
 	  	'#4F6D7A'
 	  ]
 
+	  // hover effect
 	  d3.selectAll('circle')
 	  		.on('mouseover', function(d){
 						d3.select(this)
 						.attr('fill', colorArray[ Math.floor(Math.random() * 9) ])
 					})
 
+	  // flatten all children
 	  function classes(root) {
 	  var classes = [];
 

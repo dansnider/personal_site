@@ -1,5 +1,5 @@
 
-
+// Append text
 var heading = document.createElement( 'div' );
 heading.style.position = 'absolute';
 heading.style.zIndex = 1;    
@@ -18,10 +18,12 @@ list.id = "nav";
 list.innerHTML = '<li><a href="#workView">WORK</a></li><li><a href="#skillsView">SKILLS</a></li><li><a href="#contactView">CONTACT</a></li><li><a href="./DanSniderResume.pdf" target="_blank">RESUME</a></li>'
 document.body.appendChild( list ) ;
 
+// Define renderer
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+// Define camera
 var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
 
 camera.position.y = 0;
@@ -38,6 +40,7 @@ var material = new THREE.MeshBasicMaterial({
 		wireframe: true, 
 	});
 
+// Drawing the cubes with different start positions based on index
 var cubes = [];
 
 for ( var i = 0; i < 60; i++ ) {
@@ -49,10 +52,12 @@ for ( var i = 0; i < 60; i++ ) {
 	})
 }
 
+// manual rotation function for testing purposes
 function rotate( degrees ) {
 	cube.rotation.y = degrees * (Math.PI / 180);
 }
 
+// Render each cube
 function render() {
 	requestAnimationFrame( render );
 	cubes.forEach( function( cube ) {

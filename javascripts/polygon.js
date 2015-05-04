@@ -21,6 +21,7 @@ document.body.appendChild( list ) ;
 // Define renderer
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setClearColor( 0x000000, 1 );
 document.body.appendChild( renderer.domElement );
 
 // Define camera

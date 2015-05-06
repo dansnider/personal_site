@@ -1,5 +1,9 @@
 @media (max-width: 600px) {
   
+  html {
+  	width: 100%;
+  }
+
   h2 {
     font-size: 56px;
   }

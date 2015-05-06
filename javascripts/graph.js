@@ -42,7 +42,7 @@ var renderGraph = function() {
 		}
 
 		var width = window.innerWidth,
-				height = window.innerHeight;
+				height = window.innerHeight + 50;
 		
 		// canvas creation
 		var canvas = d3.select('.svg')

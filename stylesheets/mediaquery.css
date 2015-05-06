@@ -1,7 +1,7 @@
 @media (max-width: 600px) {
   
   h2 {
-    font-size: 76px;
+    font-size: 50px;
   }
 
   #spirit-dog {
@@ -10,5 +10,9 @@
 
   #icon-row i {
   	display: block;
+  }
+
+  li {
+  	font-size: 32px;
   }
 }

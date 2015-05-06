@@ -15,4 +15,7 @@
   li {
   	font-size: 32px;
   }
+  #about-me-button {
+  	display: none;
+  }
 }

@@ -9,7 +9,7 @@ var renderGraph = function() {
 				"children": [
 					{"name": "Javascript", "size": 600},
 					{"name": "Angular.js", "size": 200},
-					{"name": "BackboneJS", "size": 150},
+					{"name": "BackboneJS", "size": 180},
 					{"name": "D3.js", "size": 220},
 					{"name": "Three.js", "size": 60},
 					{"name": "jQuery", "size": 380},
@@ -23,7 +23,7 @@ var renderGraph = function() {
 					{"name": "Ruby on Rails", "size": 360},
 					{"name": "Sinatra", "size": 100},
 					{"name": "RSPEC", "size": 80},
-					{"name": "Action Mailer", "size": 140},
+					{"name": "Action Mailer", "size": 180},
 				]
 			},
 			{
@@ -35,7 +35,7 @@ var renderGraph = function() {
 					{"name": "Bootstrap", "size": 160},	
 					{"name": "Git", "size": 170},	
 					{"name": "Materialize", "size": 140},	
-					{"name": "Creative Suite", "size": 160}	
+					{"name": "Creative Suite", "size": 240}	
 					]
 				}
 			]

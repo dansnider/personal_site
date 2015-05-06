@@ -8,9 +8,9 @@ var renderGraph = function() {
 				"name": "Javascript",
 				"children": [
 					{"name": "Javascript", "size": 600},
-					{"name": "Angular.js", "size": 120},
-					{"name": "BackboneJS", "size": 100},
-					{"name": "D3.js", "size": 160},
+					{"name": "Angular.js", "size": 200},
+					{"name": "BackboneJS", "size": 150},
+					{"name": "D3.js", "size": 220},
 					{"name": "Three.js", "size": 60},
 					{"name": "jQuery", "size": 380},
 					{"name": "AJAX", "size": 420},
@@ -23,7 +23,7 @@ var renderGraph = function() {
 					{"name": "Ruby on Rails", "size": 360},
 					{"name": "Sinatra", "size": 100},
 					{"name": "RSPEC", "size": 80},
-					{"name": "Action Mailer", "size": 100},
+					{"name": "Action Mailer", "size": 140},
 				]
 			},
 			{
@@ -35,7 +35,7 @@ var renderGraph = function() {
 					{"name": "Bootstrap", "size": 160},	
 					{"name": "Git", "size": 170},	
 					{"name": "Materialize", "size": 140},	
-					{"name": "Creative Suite", "size": 130}	
+					{"name": "Creative Suite", "size": 160}	
 					]
 				}
 			]
@@ -86,7 +86,7 @@ var renderGraph = function() {
 
 	  node.append('text')
 	  		.transition()
-	  		.attr("dy", ".3em")
+	  		.attr("dy", ".25em")
 	      .style("text-anchor", "middle")
 	  		.text(function(d) { return d.className })
 
